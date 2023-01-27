@@ -1,0 +1,91 @@
+/*------------------------- General element styling -------------------------*/
+
+html, body {
+    background-color: #37392e;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*------------------------- Navbar -------------------------*/
+
+nav {
+    background-color: #19647e;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.nav-color {
+    line-height: 1.8;
+    border: none;
+    background-color: #19647e;
+}
+
+.nav-color:hover {
+    background-color: #37392e;
+}
+
+.nav-link {
+    color: #eee5e5;
+}
+
+.nav-link:hover {
+    background-color: #37392e;
+}
+
+.dropdown-menu {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.categories {
+    background-color: #37392e;
+}
+
+.navbar-toggler {
+    margin-right: 20px;
+}
+
+
+/*------------------------- Posts -------------------------*/
+
+.post-card {
+    background-color: #eee5e5;
+    border-top: 1px ridge #37392e;
+    border-bottom: 1px ridge #37392e;
+}
+
+.post-card * {
+    color: #37392e;
+}
+
+.brand {
+    font-size: 50px;
+}
+
+.post-date {
+    font-size: 15px;
+}
+
+
+/*------------------------- Extra tools for Users -------------------------*/
+
+.logged-in-features {
+    background-color: #28afb0;
+}
+
+
+/*------------------------- Footer -------------------------*/
+
+footer {
+    background-color: #19647e;
+}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %} 
+{% block title %}Home{% endblock %}
+<a href="{% url 'post_detail' post.slug  %}" class="post-link">
+
+</a>
+{% block content %}
+
+    <div class="container-fluid g-0" style="height: 100%;">
+        <div class="row g-0">
+            <div class="col-md-4 col-lg-3 text-center logged-in-features">
+                <div class="sticky-top navbar-expand-md">
+                    {% if user.is_authenticated %}
+                    <ul class="list-unstyled fs-2 p-4">
+                        <h2>Welcome back dasdadqwdawd</h2>
+                        <a href="#"><li>Create Post</li></a>
+                        <li>News API</li>
+                        <li>Stock API</li>
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9 px-0 px-md-3 text-center">
+                    {% for post in post_list %}
+                    <!-- Whole Card is link -->
+                    <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                        <div class="post-card my-3">
+                                    <!-- If/else depending on if post contains an image -->
+                            {% if "placeholder" in post.featured_image.url %}
+
+                            <h2 class="pt-4">{{ post.title }}</h2>
+                            <h4>By: {{ post.author | safe }}<span class="post-date"> | {{ post.created_on }}</span></h4>
+                            <h6>LIKES AND COMMENTS</h6>
+                            {% else %}
+
+                            <div class="row g-0">
+                                <div class="col-md-4 col-lg-6">
+                                    <h3 class="pt-4">{{ post.title }}</h3>
+                                    <h5>By: {{ post.author | safe }}<span class="post-date"> | {{ post.created_on }}</span></h5>
+                                    <h6>LIKES AND COMMENTS</h6>
+                                    </div>                        
+                                        <div class="col-md-8 col-lg-6">
+                                    
+                                    <img class="m-2" style="max-width: 300px; height: auto;" src=" {{ post.featured_image.url }}">
+                                </div>
+                            </div>
+                                    {% endif %}
+                            <p class="m-0 p-3">{{ post.excerpt | safe }}</p>
+                            <p class="m-0"><a href="{{ post.link}}"><a></p>
+                        </div>
+                    </a>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
