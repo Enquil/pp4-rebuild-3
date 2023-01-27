@@ -1,7 +1,7 @@
 /*------------------------- General element styling -------------------------*/
 
 html, body {
-    background-color: #37392e;
+    background-color: #444444;
 }
 
 a {
@@ -24,21 +24,17 @@ nav {
 }
 
 .nav-color {
-    line-height: 1.8;
+    line-height: 1.6;
     border: none;
     background-color: #19647e;
 }
 
 .nav-color:hover {
-    background-color: #37392e;
-}
-
-.nav-link {
-    color: #eee5e5;
+    background-color: #444444;
 }
 
 .nav-link:hover {
-    background-color: #37392e;
+    background-color: #444444;
 }
 
 .dropdown-menu {
@@ -48,11 +44,15 @@ nav {
 }
 
 .categories {
-    background-color: #37392e;
+    background-color: #444444;
 }
 
 .navbar-toggler {
     margin-right: 20px;
+}
+
+.nav-link {
+    color: #eee5e5;
 }
 
 
@@ -60,12 +60,12 @@ nav {
 
 .post-card {
     background-color: #eee5e5;
-    border-top: 1px ridge #37392e;
-    border-bottom: 1px ridge #37392e;
+    border-top: 3px ridge #ddcecd;
+    border-bottom: 3px ridge #ddcecd;
 }
 
 .post-card * {
-    color: #37392e;
+    color: #444444;
 }
 
 .brand {
@@ -80,7 +80,11 @@ nav {
 /*------------------------- Extra tools for Users -------------------------*/
 
 .logged-in-features {
-    background-color: #28afb0;
+    background-color: #ddcecd;
+}
+
+.sidebar-link {
+    color: #444444;
 }
 
 

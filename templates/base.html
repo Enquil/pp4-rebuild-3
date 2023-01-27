@@ -24,7 +24,7 @@
                     <!-- Navbar -->
     <nav class="navbar navbar-dark navbar-expand-md" style="width: 100%;">
                     <!-- Navbar brand -->
-        <a class="ms-2" href="#"><span class="navbar-brand brand">RTR</span></a>
+        <a class="ms-2" href="{% url 'index' %}"><span class="navbar-brand brand">RTR</span></a>
 
                     <!-- Nav burger for smaller screens -->
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -35,30 +35,29 @@
         <div class="navbar-collapse collapse" id="navbar">
 
                     <!-- Links -->
-            <ul class="navbar-nav me-auto mb-lg-0">
-                <li class="nav-item"><a class="ps-2 nav-link" aria-current="page" href="#">Home</a></li>
+                <ul class="navbar-nav ms-auto mb-lg-0">
+                    <div class="dropdown">
+                        <li class="btn btn-secondary dropdown-toggle nav-color fs-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                        </li>
+                        <ul class="dropdown-menu" style="margin: 0;" aria-labelledby="dropdownMenuButton1">
+                            <li class="ps-3 nav-item categories"><a class="nav-link fs-3" style="color: #eee5e5;" href="{% url 'index' %}">All Categories</a></li>
+                            <li class="ps-3 nav-item categories"><a class="nav-link fs-3" style="color: #eee5e5;" href="">Business</a></li>
+                            <li class="ps-3 nav-item categories"><a class="nav-link fs-3" style="color: #eee5e5;" href="">Art/Entertainment</a></li>
+                            <li class="ps-3 nav-item categories"><a class="nav-link fs-3" style="color: #eee5e5;" href="">Finance/Economics</a></li>
+                            <li class="ps-3 nav-item categories"><a class="nav-link fs-3" style="color: #eee5e5;" href="">Politics</a></li>
+                            <li class="ps-3 nav-item categories"><a class="nav-link fs-3" style="color: #eee5e5;" href="">Sciences</a></li>
+                            <li class="ps-3 nav-item categories"><a class="nav-link fs-3" style="color: #eee5e5;" href="">Opinions</a></li>
+                            <li class="ps-3 nav-item categories"><a class="nav-link fs-3" style="color: #eee5e5;" href="">Ships and Giggles</a></li>
+                        </ul>
+                    </div>
+                <li class="nav-item"><a class="ps-2 nav-link fs-3" style="color: #eee5e5;" aria-current="page" href="#">Home</a></li>
                 {% if user.is_authenticated %}
-                <li class="nav-item"><a class="ps-2 nav-link" aria-current="page" href="{% url 'account_logout' %}">Log Out</a></li>
+                <li class="nav-item"><a class="ps-2 nav-link fs-3" style="color: #eee5e5;" aria-current="page" href="{% url 'account_logout' %}">Log Out</a></li>
                 {% else %}
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="{% url 'account_login' %}">Log In</a></li>
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="{% url 'account_signup' %}">Register</a></li>
+                <li class="nav-item"><a class="nav-link fs-3" style="color: #eee5e5;" aria-current="page" href="{% url 'account_login' %}">Log In</a></li>
+                <li class="nav-item"><a class="nav-link fs-3" style="color: #eee5e5;" aria-current="page" href="{% url 'account_signup' %}">Register</a></li>
                 {% endif %}
-                    <!-- Collapsible Category Menu -->
-                <div class="dropdown">
-                    <li class="btn btn-secondary dropdown-toggle nav-color" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Categories
-                    </li>
-                    <ul class="dropdown-menu" style="margin: 0;" aria-labelledby="dropdownMenuButton1">
-                        <li class="ps-3 nav-item categories"><a class="nav-link" href="{% url 'index' %}">All Categories</a></li>
-                        <li class="ps-3 nav-item  categories"><a class="nav-link" href="">Business</a></li>
-                        <li class="ps-3 nav-item  categories"><a class="nav-link" href="">Art/Entertainment</a></li>
-                        <li class="ps-3 nav-item  categories"><a class="nav-link" href="">Finance/Economics</a></li>
-                        <li class="ps-3 nav-item  categories"><a class="nav-link" href="">Politics</a></li>
-                        <li class="ps-3 nav-item  categories"><a class="nav-link" href="">Sciences</a></li>
-                        <li class="ps-3 nav-item  categories"><a class="nav-link" href="">Opinions</a></li>
-                        <li class="ps-3 nav-item  categories"><a class="nav-link" href="">Ships and Giggles</a></li>
-                    </ul>
-                </div>
             </ul>
         </div>
     </nav>

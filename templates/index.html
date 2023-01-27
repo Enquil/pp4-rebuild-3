@@ -12,14 +12,14 @@
                     {% if user.is_authenticated %}
                     <ul class="list-unstyled fs-2 p-4">
                         <h2>Welcome back dasdadqwdawd</h2>
-                        <a href="#"><li>Create Post</li></a>
-                        <li>News API</li>
-                        <li>Stock API</li>
+                        <li><a class="sidebar-link" href="#">Create Post</a></li>
+                        <li><a class="sidebar-link" href="#">News</a></li>
+                        <li><a class="sidebar-link" href="#">Financial tools</a></li>
                     </ul>
                     {% endif %}
                 </div>
             </div>
-            <div class="col-md-8 col-lg-9 px-0 px-md-3 text-center">
+            <div class="col-md-8 col-xl-7 px-0 px-md-3 text-center">
                     {% for post in post_list %}
                     <!-- Whole Card is link -->
                     <a href="{% url 'post_detail' post.slug  %}" class="post-link">
