@@ -1,1 +1,1 @@
-web: gunicorn rtr.wsgi
+web: gunicorn rtr.wsgi:application
