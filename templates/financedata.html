@@ -1,5 +1,12 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block title %}Finance{% endblock %}
 
 {% block content %}
+    <div id="curve_chart" style="display: flex; height: 40%; width: auto;"></div>
+    <form id="currencyConverter" method="POST">
+        <p><select name="currencyOne" id="currencyOne"></select><select name="currencyTwo" id="currencyTwo"></select><input id="class" type="submit">
+    </form>
+    <script type="text/javascript" src="static/jsfinancial-data.js"></script> 
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load('visualization', '1.0', {'packages':['corechart']});</script>
 {% endblock %}

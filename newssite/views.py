@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import Post
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 
 class PostList(generic.ListView):
@@ -8,6 +10,11 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 10
+
+
+@csrf_exempt
+def financedata(request):
+    return render(request, 'financedata.html')
 
 
 class PostDetail(View):

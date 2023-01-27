@@ -14,7 +14,7 @@
                         <h2>Welcome back {{ user.username }}</h2>
                         <li><a class="sidebar-link" href="#">Create Post</a></li>
                         <li><a class="sidebar-link" href="#">News</a></li>
-                        <li><a class="sidebar-link" href="#">Financial tools</a></li>
+                        <li><a class="sidebar-link" href="{% url 'financedata' %}">Financial tools</a></li>
                     </ul>
                     {% endif %}
                 </div>
