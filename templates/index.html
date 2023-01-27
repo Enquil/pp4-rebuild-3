@@ -11,7 +11,7 @@
                 <div class="sticky-top navbar-expand-md">
                     {% if user.is_authenticated %}
                     <ul class="list-unstyled fs-2 p-4">
-                        <h2>Welcome back dasdadqwdawd</h2>
+                        <h2>Welcome back {{ user.username }}</h2>
                         <li><a class="sidebar-link" href="#">Create Post</a></li>
                         <li><a class="sidebar-link" href="#">News</a></li>
                         <li><a class="sidebar-link" href="#">Financial tools</a></li>
